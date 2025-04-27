@@ -4,67 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Поиск репозиториев на GitHub</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 100%;
-            max-width: 800px;
-            text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        input, button {
-            padding: 10px;
-            font-size: 16px;
-            margin: 10px 0;
-            width: 100%;
-            max-width: 300px;
-        }
-        .repo-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .repo-item {
-            background-color: #fff;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .repo-item a {
-            color: #0073e6;
-            text-decoration: none;
-        }
-        .repo-item a:hover {
-            text-decoration: underline;
-        }
-        .error-message {
-            color: red;
-            font-size: 18px;
-        }
-        .back-button {
-            margin-top: 20px;
-            background-color: #0073e6;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .back-button:hover {
-            background-color: #005bb5;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
@@ -75,7 +15,7 @@
         <div id="errorMessage" class="error-message"></div>
         <ul class="repo-list" id="repoList"></ul>
 
-        <button id="backButton" class="back-button" onclick="goBack()" style="display: none;">Назад</button>
+        <button id="backButton" class="back-button" onclick="goBack()">Назад</button>
     </div>
 
     <script src="app.js"></script>

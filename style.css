@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    min-height: 100vh; /* Вместо фиксированной высоты */
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 30px auto; /* добавляем отступ сверху и снизу */
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px 0;
+    width: 100%;
+    max-width: 300px;
+}
+
+.repo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.repo-item {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.repo-item a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+.repo-item a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 18px;
+}
+
+.back-button {
+    margin-top: 20px;
+    background-color: #0073e6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.back-button.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.back-button:hover {
+    background-color: #005bb5;
+}
