@@ -59,14 +59,11 @@ input, button {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+    display: none; /* Кнопка скрыта по умолчанию */
 }
 
 .back-button.show {
-    visibility: visible;
-    opacity: 1;
+    display: inline-block; /* Кнопка показывается, если класс 'show' добавлен */
 }
 
 .back-button:hover {

@@ -9,13 +9,13 @@
 <body>
     <div class="container">
         <h1>Поиск репозиториев на GitHub</h1>
-        <input type="text" id="searchQuery" placeholder="Введите ключевое слово" />
+        <input type="text" id="searchQuery" placeholder="Введите ключевое слово" maxlength="40" />
         <button onclick="searchRepos()">Поиск</button>
 
         <div id="errorMessage" class="error-message"></div>
         <ul class="repo-list" id="repoList"></ul>
 
-        <button id="backButton" class="back-button" onclick="goBack()">Назад</button>
+        <button id="backButton" class="back-button" onclick="goBack()" style="display: none;">Назад</button>
     </div>
 
     <script src="app.js"></script>

@@ -3,6 +3,7 @@ let canSearch = true; // Контроль возможности поиска
 // Функция для поиска репозиториев на GitHub
 async function searchRepos() {
     const errorMessage = document.getElementById('errorMessage');
+    const backButton = document.getElementById('backButton');
     
     if (!canSearch) {
         errorMessage.textContent = 'Пожалуйста, подождите 10 секунд перед следующим поиском.';
@@ -14,7 +15,7 @@ async function searchRepos() {
     let query = document.getElementById('searchQuery').value.trim(); // Убираем пробелы по краям
 
     // Заменяем несколько пробелов между словами на один
-    query = query.replace(/\s+/g, ' '); 
+    query = query.replace(/\s+/g, ' ');
 
     // Проверка на пустой запрос
     if (!query) {
@@ -41,7 +42,6 @@ async function searchRepos() {
     errorMessage.textContent = '';
     const repoList = document.getElementById('repoList');
     repoList.innerHTML = '';
-    const backButton = document.getElementById('backButton');
 
     try {
         // Запрос к GitHub API
